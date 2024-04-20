@@ -1,0 +1,112 @@
+01.
+public class PatternPrinter {
+    public static void main(String[] args) {
+        int rows = 5;
+        for (int i = 1; i <= rows; i++) {
+            for (int j = i; j < rows; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                if (k == 1 || k == (2 * i - 1)) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+output:
+    *
+   * *
+  *   *
+ *     *
+*       *
+
+
+
+
+02.
+public class NumberPattern {
+    public static void main(String[] args) {
+        int rows = 5;
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = i; j >= 1; j--) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+output:
+1 
+2 1 
+3 2 1 
+4 3 2 1 
+5 4 3 2 1
+
+
+
+
+03.
+public class PatternGenerator {
+    public static void main(String[] args) {
+        char[] letters = {'A', 'B', 'C', 'D', 'E', 'F'};
+
+        for (int i = letters.length; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                System.out.print(letters[j] + " ");
+            }
+            System.out.println();
+        }
+
+        for (int i = 1; i < letters.length; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print(letters[j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+output:
+
+A B C D E F 
+A B C D E 
+A B C D 
+A B C 
+A B 
+A 
+A 
+A B 
+A B C 
+A B C D 
+A B C D E 
+A B C D E F
+
+
+04.public class NumberPattern {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j % 2 == 0 ? "0" : "1");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+output:
+
+1
+10
+101
+1010
+10101
